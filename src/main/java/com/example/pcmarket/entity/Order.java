@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 @Entity
+@Table(name = "engage")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

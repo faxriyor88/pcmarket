@@ -9,6 +9,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
+@Table(name = "client")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +19,4 @@ public class User {
     @Column(nullable = false,unique = true)
     private String phone_number;
     private String email;
-
-
 }
