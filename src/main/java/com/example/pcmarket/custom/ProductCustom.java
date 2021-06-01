@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.config.Projection;
 @Projection(types = Product.class)
 public interface ProductCustom {
     Integer getId();
-    String getPrice();
+    Integer getPrice();
     String getInfo();
     String getName();
     String getGuarantee();

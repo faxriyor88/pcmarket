@@ -16,7 +16,7 @@ public class Product {
     private Integer id;
     private String name;
     private String info;
-    private String price;
+    private Integer price;
     private String guarantee;
     @OneToOne
     private Attachment attachment;
