@@ -7,4 +7,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(path = "characteristics",excerptProjection = CharacteristicsCustom.class)
 public interface CharacteristicsRepository extends JpaRepository<Characteristics,Integer> {
+
 }
