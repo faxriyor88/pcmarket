@@ -4,6 +4,7 @@ import com.example.pcmarket.custom.ProductCustom;
 import com.example.pcmarket.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
@@ -31,6 +32,10 @@ public interface ProductRepository extends JpaRepository<Product,Integer> {
     @Query(value = "select * from  product where name=?1 and price>?2 and price<?3",nativeQuery = true)
     List<Product> filrpcInfoPrice(String  info,Integer id1,Integer id2);
 
+    //Xarakteristika berib qidirish
+
+    @Query(value = "select p.* from property inner join characteristics c on c.id = property.characteristics_id inner join product p on p.id = c.product_id where property.name IN (:names)",nativeQuery = true)
+    List<Product> findProductFive(String names);
 
 
 }
